@@ -64,6 +64,94 @@
     <!-- Spinner End -->
 
 
+    <style>
+        .modal {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(1.1);
+            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+        }
+
+        @media (max-width: 425px) {
+            .modal {
+                zoom: 0.7
+            }
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 1rem 1.5rem;
+            width: 24rem;
+            border-radius: 0.5rem;
+        }
+
+        .modal-content img {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .close-button {
+            float: right;
+            width: 1.5rem;
+            line-height: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 0.25rem;
+            background-color: lightgray;
+        }
+
+        .close-button:hover {
+            background-color: darkgray;
+        }
+
+        .show-modal {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1.0);
+            transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+        }
+    </style>
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img src="./popup.jpg">
+        </div>
+    </div>
+
+    <script>
+        const modal = document.querySelector(".modal");
+        const closeButton = document.querySelector(".close-button");
+
+        function toggleModal() {
+            modal.classList.toggle("show-modal");
+        }
+
+        window.addEventListener("load", (event) => {
+            toggleModal();
+        });
+
+        function windowOnClick(event) {
+            if (event.target === modal) {
+                toggleModal();
+            }
+        }
+
+        closeButton.addEventListener("click", toggleModal);
+        window.addEventListener("click", windowOnClick);
+    </script>
+
+
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="row gx-0 d-none d-lg-flex">
@@ -455,7 +543,7 @@
                         </button>
                         <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-0"
                             data-bs-toggle="pill" data-bs-target="#tab-pane-5" type="button">
-                            <h3 id="enquiry" class="m-0">05. Nirvana City Amritsar</h3>
+                            <h3 id="enquiry" class="m-0">05. Lal Quila Rice Mill</h3>
                         </button>
                     </div>
                 </div>
@@ -550,16 +638,19 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/project-4.png"
-                                            style="object-fit: cover;" alt="">
+                                        <img class="position-absolute img-fluid w-100 h-100"
+                                            src="img/amar-singh-chawal-wala-aleco.jpg" style="object-fit: cover;"
+                                            alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h1 class="mb-3">The Nirvana Project</h1>
-                                    <p class="mb-4">Metcalfe Nirvana City is strategically located in Grand Trunk Road
-                                        in the city of Amritsar and is a well-planned project. The residential dwellings
-                                        are in Ready To Move state. Metcalfe Nirvana City project is an offering from
-                                        the well-established developer Prabhatam Infrastructures Ltd.</p>
+                                    <h1 class="mb-3">Lal Quila Rice Mill</h1>
+                                    <p class="mb-4">Lal Quila Rice Mill a well-planned project by Amar Singh Chawal Wala
+                                        Company
+                                        located at Tarn Tarn Road, Amritsar was assisted with our team of highly
+                                        professional workers. The building was given an elegant look with our in house
+                                        manufactured UPVC Windows and Aluminium Doors.
+                                    </p>
                                     <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>
                                     <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>
                                     <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>
