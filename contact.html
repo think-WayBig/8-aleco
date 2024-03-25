@@ -106,7 +106,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
                 <!-- <a href="service.html" class="nav-item nav-link">Services</a> -->
                 <div class="nav-item dropdown">
@@ -124,9 +124,23 @@
                     </div>
                 </div>
                 <a href="project.html" class="nav-item nav-link">Projects</a>
-                <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <style>
+                    .brochure {
+                        display: none;
+                    }
+
+                    @media (max-width: 990px) {
+                        .brochure {
+                            display: unset;
+                        }
+                    }
+                </style>
+                <a href="./catalogue.html" class="nav-item nav-link brochure">Get Catalogue</a>
             </div>
             <a href="tel:+918146042285" class="btn btn-primary py-2 px-4 d-none d-lg-block">Call Now</a>
+            <a style="margin-left: 20px;" href="./catalogue.html"
+                class="btn btn-primary py-2 px-4 d-none d-lg-block">Get Catalogue</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -163,7 +177,8 @@
                                 <div class="ms-4">
                                     <p class="mb-2"><i style="color: black;font-size: 19px;"
                                             class="fa fa-map-marker-alt"></i>&nbsp; Address</p>
-                                    <h3 class="mb-0">Plot no.4, Peshawarian Farms, Loharka Rd, Amritsar-143001, Punjab</h3>
+                                    <h3 class="mb-0">Plot no.4, Peshawarian Farms, Loharka Rd, Amritsar-143001, Punjab
+                                    </h3>
                                 </div>
                             </div>
                             <div class="mb-3">
@@ -187,7 +202,8 @@
                                 <div class="ms-4">
                                     <p class="mb-2"><i style="color: black;font-size: 19px;"
                                             class="fa fa-map-marker-alt"></i>&nbsp; Address</p>
-                                    <h3 class="mb-0">SCO-20, Model Town Ext, D-Block, Dugri Road, Ludhiana-141002, Punjab</h3>
+                                    <h3 class="mb-0">SCO-20, Model Town Ext, D-Block, Dugri Road, Ludhiana-141002,
+                                        Punjab</h3>
                                 </div>
                             </div>
                             <div class="mb-3">
